@@ -20,17 +20,18 @@ def check_curve_parameters():
 
 assert check_curve_parameters(), "Curve Discriminant not valid"
 
-
-
+#We get ALice's key pair
 [sk,pk]=get_key_pair()
 
 print (f"Alice's public key={pk}\n")
 
-s,r=get_signature(m,sk)
+#We sign the message m with Alice's private key
+r,s=get_signature(m,sk)
 
 print (f"Message: {m}\n\nSignature S=(s,r):\n(r={r},\ns={s})\n")
 
-assert verify_signature(s,r,m,pk), "Signature could not be verified"
+#We verify the signature S=(r,s) of the message m with Alice's public key
+assert verify_signature(r,s,m,pk), "Signature could not be verified"
 
 print (f"Signature have been verified correctly")
 
