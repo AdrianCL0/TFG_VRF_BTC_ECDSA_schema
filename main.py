@@ -33,7 +33,7 @@ print (f"Message: {m}\n\nSignature S=(s,r):\n(r={r},\ns={s})\n")
 #We verify the signature S=(r,s) of the message m with Alice's public key
 assert verify_signature(r,s,m,pk), "Signature could not be verified"
 
-print (f"Signature have been verified correctly")
+print (f"Signature has been verified correctly")
 
   
 
