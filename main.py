@@ -1,7 +1,7 @@
 import sys
 import configparser as config
 
-from ecdsa import get_key_pair,get_signature,verify_signature
+from ecdsa2 import get_key_pair,get_signature,verify_signature
 from secp256k1 import EC
 
 #We get the parameters of the transaction to sign and define the m as the tx id
