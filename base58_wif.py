@@ -1,18 +1,7 @@
-# Convert the blockchain.info wallet key (priv:) from Wif58
-# Usage: python3 convert_blockchain_info_wallet_priv_key_to_WIF.py
-# Important: You need Python 3. Older versions will not work.
-
-# Step 1.
-# Start with the blockchain.info wallet priv: key
-BLOCKCHAIN_WALLET_PRIV = input("\nEnter the blockchain.info wallet 'priv:' key: ") 
-print("Blockchain Wallet Priv: " + BLOCKCHAIN_WALLET_PRIV)
-
-# Step 2.
-# Base58 decode (with checksum)
-
-from hashlib import sha256
 from collections import deque
 DEFAULT_CHARSET = b'123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz'
+import base58
+
 
 def _b58decode_int(val, base, charset):
         output = 0
@@ -20,7 +9,7 @@ def _b58decode_int(val, base, charset):
             output = output * base + charset.index(char)
         return output
 
-# Decode base58check encoded input to original raw bytes.
+
 def b58decode(val, charset=DEFAULT_CHARSET):
     if isinstance(val, str):
         val = val.encode()
@@ -47,27 +36,6 @@ def b58decode(val, charset=DEFAULT_CHARSET):
     prefix = b'\0' * pad_len
     return prefix + bytes(result)
 
-# decode the blockchain private key from base58 checksum, to hex
-b = b58decode(BLOCKCHAIN_WALLET_PRIV)
-PK0 = b.hex()
-print("Private Key Hex: " + PK0)
-
-# Step 3.
-# Convert hex private key to WIF
-# See: https://gist.github.com/Jun-Wang-2018/3105e29e0d61ecf88530c092199371a7
-
-# From private key(hex) to Wallet Import Format(WIF)
-# Reference: https://medium.freecodecamp.org/how-to-create-a-bitcoin-wallet-address-from-a-private-key-eca3ddd9c05f
-#            https://docs.python.org/2/library/hashlib.html
-import codecs  #If not installed: "pip3 install codecs"
-import hashlib
-PK1 = '80'+ PK0
-PK2 = hashlib.sha256(codecs.decode(PK1, 'hex'))
-PK3 = hashlib.sha256(PK2.digest())
-checksum = codecs.encode(PK3.digest(), 'hex')[0:8]
-PK4 = PK1 + str(checksum)[2:10]  #I know it looks wierd
-
-# Define base58
 def base58(address_hex):
     alphabet = '123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz'
     b58_string = ''
@@ -86,8 +54,9 @@ def base58(address_hex):
     for one in range(ones):
         b58_string = '1' + b58_string
     return b58_string
+    
+    
 
-WIF = base58(PK4)
-print("WIF: " + WIF)
-print("\nTo import into electrum, enter:\np2pkh:" + WIF)
-print("\n")
+
+
+

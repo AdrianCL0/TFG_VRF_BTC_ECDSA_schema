@@ -1,0 +1,179 @@
+{
+    "utils": {
+        "entropy": [
+            {
+                "length": 32,
+                "strength": 128,
+                "entropy": "2c092549a74b66e59d0759ae10449e21"
+            },
+            {
+                "length": 40,
+                "strength": 160,
+                "entropy": "3cc90cb4cd18e4924c5dde0bd7e067e474685af0"
+            },
+            {
+                "length": 48,
+                "strength": 192,
+                "entropy": "dc0f65e6b0776d03f6b0f60a1961f9c821dc6cc12e015e67"
+            },
+            {
+                "length": 56,
+                "strength": 224,
+                "entropy": "fe919b9dfe1d8cce1ad041ec1d879d359bd25ee1391b6ab47ddbd1c4"
+            },
+            {
+                "length": 64,
+                "strength": 256,
+                "entropy": "794ce74ecb529a94feb270dc095cf4f6aa791dbdd9831402fac02ada9f6a003d"
+            }
+        ],
+        "mnemonic": [
+            {
+                "strength": 128,
+                "language": "english",
+                "mnemonic": "essay mammal later conduct cinnamon bunker target flower gold you report auto",
+                "words": 12
+            },
+            {
+                "strength": 160,
+                "language": "chinese_simplified",
+                "mnemonic": "散 残 争 坯 抗 泽 决 党 估 沈 插 系 货 麻 陈",
+                "words": 15
+            },
+            {
+                "strength": 192,
+                "language": "french",
+                "mnemonic": "demander émouvoir séance plaisir vernir luron élaborer nerveux fourmi courage viaduc persil innocent sternum fugitif jardin franchir indice",
+                "words": 18
+            },
+            {
+                "strength": 224,
+                "language": "italian",
+                "mnemonic": "umorismo terzetto trattato nebulosa serata anca pezzo debutto regalato luppolo arabica cuculo falco sradicare bibita parola oggetto salasso gazebo pertugio bibita",
+                "words": 21
+            },
+            {
+                "strength": 256,
+                "language": "japanese",
+                "mnemonic": "おくる きそう おとしもの きけんせい よそう さこく きはく てまえ えいご えんぜつ あつまり めいさい しのぐ さくら こんすい せんやく あおぞら せっぱん きうん さとおや すんぽう ないこう だっきゃく たよる",
+                "words": 24
+            },
+            {
+                "strength": 160,
+                "language": "chinese_traditional",
+                "mnemonic": "枝 走 翻 巧 棋 核 溝 悟 庭 抬 毅 際 姆 林 拔",
+                "words": 15
+            },
+            {
+                "strength": 192,
+                "language": "korean",
+                "mnemonic": "부문 친척 간부 금요일 행운 수동적 차림 증세 정지 책임 그날 표면 망원경 넷째 비빔밥 고장 강당 냉장고",
+                "words": 18
+            },
+            {
+                "strength": 224,
+                "language": "spanish",
+                "mnemonic": "mamá odisea flecha oído queja recurso cárcel lacra curva ancla olla fresa espada olvido tractor asegurar hombre pausa marrón carpeta arder",
+                "words": 21
+            }
+        ]
+    },
+    "bitcoin": {
+        "mainnet": {
+            "cryptocurrency": "Bitcoin",
+            "symbol": "BTC",
+            "network": "mainnet",
+            "strength": 160,
+            "entropy": "0fed29d2d8481a77621caf7f21ca72f31c782504",
+            "mnemonic": "avocado harsh input rack like desert mask nominee left atom original tower shy barely base",
+            "language": "english",
+            "passphrase": null,
+            "seed": "292b66695c46274e3a83d088d456b55554821ddf628c9e5f33d30139ad629438ec6f87cca67be8fb706a77723202e5f4db6b6680ed6f51243837ebceb1372536",
+            "root_xprivate_key": "xprv9s21ZrQH143K3nQRmmivfV9RstNXkiuGcp6XCaUQyNeD4Zczidb8K3ue3LCVSA47aRqvbpVj5NKLxv8DJi1adCzPmzXVJiyJ7o5WkRTDuFe",
+            "root_xprivate_key_hex": "0488ade4000000000000000000ad41ef910cdcae932cb4060777b4284ee38f5b29c5fb60fda8416f298a14702c007a286fa06bdb8cc821b1d34d88547b36bf7ab434c632db7ee21fc77b4130a852",
+            "root_xpublic_key": "xpub661MyMwAqRbcGGUtsoFw2d6ARvD2ABd7z327zxt2XiBBwMx9GAuNrrE7tbRuWF5MjjZ1BzDsRdaSHc9nVKAgHzQrv6pwYW3Hd7LSzbh8sWS",
+            "root_xpublic_key_hex": "0488b21e000000000000000000ad41ef910cdcae932cb4060777b4284ee38f5b29c5fb60fda8416f298a14702c02949b9f64223e124eb9a8383fba0b21b5845fcfbdc84dec7692d21c716410eab0",
+            "xprivate_key": "xprvA3nwFVTnTFsvwcFaFJd18aFoAguPwgn3N5eWRx785nSHshmxogPYyCzuHc4mu7rZvPArT4WjjakcwfzmH3oJBH71DmaeEGo4bbNgbq3FsRV",
+            "xprivate_key_hex": "0488ade405b9e49a9c00000000732993021308a753144a66f61475a5e52ce5c8a42b6c03fe43d5b30956c3722000730305af76b25e3b5fbc1169e6cb77d34a3fd7851368c11074381a359e287d3a",
+            "xpublic_key": "xpub6GnHezzgHdSEA6L3MLA1ViCXiijtM9VtjJa7ELWje7yGkW77MDhoX1KP8sbcbXeaXXtri6kfDWPLiPuntxaw5cjaPbpiv2rm2wdq1uUwERQ",
+            "xpublic_key_hex": "0488b21e05b9e49a9c00000000732993021308a753144a66f61475a5e52ce5c8a42b6c03fe43d5b30956c3722002b506c3585ebaaf5553b5e3b767c958c6eec4d0eba8a9b9fe90ff2e512a70c30c",
+            "uncompressed": "b506c3585ebaaf5553b5e3b767c958c6eec4d0eba8a9b9fe90ff2e512a70c30c1eb671eea88a10a472f05432f3717cce7d07d5e5774eff5ecda0e3d65b4dfda6",
+            "compressed": "02b506c3585ebaaf5553b5e3b767c958c6eec4d0eba8a9b9fe90ff2e512a70c30c",
+            "chain_code": "732993021308a753144a66f61475a5e52ce5c8a42b6c03fe43d5b30956c37220",
+            "private_key": "730305af76b25e3b5fbc1169e6cb77d34a3fd7851368c11074381a359e287d3a",
+            "public_key": "02b506c3585ebaaf5553b5e3b767c958c6eec4d0eba8a9b9fe90ff2e512a70c30c",
+            "wif": "L15H89HiXh6m4CNPkMvAg1Wduscw5wuvktACPzrHowDHufwPgR7k",
+            "finger_print": "3c59f44d",
+            "semantic": "p2pkh",
+            "path": "m/44'/0'/0'/0/0",
+            "hash": "3c59f44db92906a8fae4579871bde0b0952d6a5f",
+            "addresses": {
+                "p2pkh": "16W7JeQXEzmYKX8UMFMrg6FwNSPduVdYHo",
+                "p2sh": "36AhhqDLBDSA4cSrJ5zsXTq6YXVnyED61S",
+                "p2wpkh": "bc1q83vlgnde9yr237hy27v8r00qkz2j66jlynppym",
+                "p2wpkh_in_p2sh": "3BZskX2gsi38aitVZauFdYtGzrnBKT59xq",
+                "p2wsh": "bc1qlp932cdsy78jfka7gcv9gk50cdku5g6thxjpzstcwn9gnqd5ll9q4l20kp",
+                "p2wsh_in_p2sh": "3LSAyhwnHkj9SGP7sAZieKQAnngaHvo8Vw"
+            }
+        },
+        "testnet": {
+            "cryptocurrency": "Bitcoin",
+            "symbol": "BTCTEST",
+            "network": "testnet",
+            "strength": 160,
+            "entropy": "0fed29d2d8481a77621caf7f21ca72f31c782504",
+            "mnemonic": "avocado harsh input rack like desert mask nominee left atom original tower shy barely base",
+            "language": "english",
+            "passphrase": null,
+            "seed": "292b66695c46274e3a83d088d456b55554821ddf628c9e5f33d30139ad629438ec6f87cca67be8fb706a77723202e5f4db6b6680ed6f51243837ebceb1372536",
+            "root_xprivate_key": "tprv8ZgxMBicQKsPebdxSLaRq8mRC1njzEwGxN1e4ztsTM8grAN5hzvspoH5xWN9SXSRwsNhbv7VEiu9RmfxRvMXSGFzJdjny5hM2tpwC5yvNZs",
+            "root_xprivate_key_hex": "04358394000000000000000000ad41ef910cdcae932cb4060777b4284ee38f5b29c5fb60fda8416f298a14702c007a286fa06bdb8cc821b1d34d88547b36bf7ab434c632db7ee21fc77b4130a852",
+            "root_xpublic_key": "tpubD6NzVbkrYhZ4Y4fkKzF2EYRXm3Jg9a8BXfcRMWwAscw5gecrLPkU1Htx8dWh2k2bXe5uoZjjxjQUynePtB1vBRs9yhaFE2hXD4vrkYrW1ma",
+            "root_xpublic_key_hex": "043587cf000000000000000000ad41ef910cdcae932cb4060777b4284ee38f5b29c5fb60fda8416f298a14702c02949b9f64223e124eb9a8383fba0b21b5845fcfbdc84dec7692d21c716410eab0",
+            "xprivate_key": "tprv8kTt2pn7rXi1YRV6usUWJDsnUpKcBCp3hdZdJNXaZkvmfJX3o3jJUxNMCnERuVEtHphdTA8VtwLRQXYWQG9EzLNbkQnwtdX7Wh873ad5axX",
+            "xprivate_key_hex": "0435839405b9e49a9c00000000732993021308a753144a66f61475a5e52ce5c8a42b6c03fe43d5b30956c3722000730305af76b25e3b5fbc1169e6cb77d34a3fd7851368c11074381a359e287d3a",
+            "xpublic_key": "tpubDH9vBEpMzuPgRtWtoX96hdXu3qqYLXzxGwAQatZsz2jAVnmpRSYtfSzDNugQ82bpKSRmKgGXkcDPQaQQHpSAy4BsTCa2bZWzcuEEmvuCN8A",
+            "xpublic_key_hex": "043587cf05b9e49a9c00000000732993021308a753144a66f61475a5e52ce5c8a42b6c03fe43d5b30956c3722002b506c3585ebaaf5553b5e3b767c958c6eec4d0eba8a9b9fe90ff2e512a70c30c",
+            "uncompressed": "b506c3585ebaaf5553b5e3b767c958c6eec4d0eba8a9b9fe90ff2e512a70c30c1eb671eea88a10a472f05432f3717cce7d07d5e5774eff5ecda0e3d65b4dfda6",
+            "compressed": "02b506c3585ebaaf5553b5e3b767c958c6eec4d0eba8a9b9fe90ff2e512a70c30c",
+            "chain_code": "732993021308a753144a66f61475a5e52ce5c8a42b6c03fe43d5b30956c37220",
+            "private_key": "730305af76b25e3b5fbc1169e6cb77d34a3fd7851368c11074381a359e287d3a",
+            "public_key": "02b506c3585ebaaf5553b5e3b767c958c6eec4d0eba8a9b9fe90ff2e512a70c30c",
+            "wif": "cRSGb4HZxko2Ddqf8mjJ3L1hY6vLkQ1cpvJfWRJoK3sJAR13J5bJ",
+            "finger_print": "3c59f44d",
+            "semantic": "p2pkh",
+            "path": "m/44'/0'/0'/0/0",
+            "hash": "3c59f44db92906a8fae4579871bde0b0952d6a5f",
+            "addresses": {
+                "p2pkh": "mm24bhVW42Co6dc64pLEW1UGERzLpqWJ5A",
+                "p2sh": "2Mwiuma9MnfwWGQ5PyDck9QpMkshxhy1Q2q",
+                "p2wpkh": "tb1q83vlgnde9yr237hy27v8r00qkz2j66jlw46jlg",
+                "p2wpkh_in_p2sh": "2N385pFxiVAYUnWX3EiX8FVsYDCzM64qySu",
+                "p2wsh": "tb1qlp932cdsy78jfka7gcv9gk50cdku5g6thxjpzstcwn9gnqd5ll9qzhuqvw",
+                "p2wsh_in_p2sh": "2NBzP3SsouDEVe41fYJBbGGPS18tk6mqZSh"
+            }
+        },
+        "addresses": [
+            "m/44'/0'/0'/0/0 16W7JeQXEzmYKX8UMFMrg6FwNSPduVdYHo 02b506c3585ebaaf5553b5e3b767c958c6eec4d0eba8a9b9fe90ff2e512a70c30c L15H89HiXh6m4CNPkMvAg1Wduscw5wuvktACPzrHowDHufwPgR7k",
+            "m/44'/0'/0'/0/1 19rtbaqSprjGpE3pxUovx38t64dYLxJ5H4 023cef50818c538a76eaec937f566acbabb0f2047fc2a082c11a9dad398c15eab4 Ky6pHMChq9sT8EhM42rzCab9SxHbFU4CM7rXhZT7fRakAeS47eob",
+            "m/44'/0'/0'/0/2 1FBUJ5QkwgBbFgHnXR2BWnyjYAh8KDXbTk 0349e0525ee723e4e9db2fb1b01e8fe5a6bc73067c024ff6d3bee7036a14758059 Kxfgz2ZAXiJ3V5Uy4hL7YKssJV3VXf9N3k72DV8XQoF6ndzxYa2U",
+            "m/44'/0'/0'/0/3 1JBW45zCCCHZ58z9AnEdbqCQ4TBnq5hVfk 03028b9e813e4d7bdee5a2930272673decc0736820e4a65676ac2af3fef89b49f1 L2P9gZUoobY1Z9mmUNfParxeMDg5rejvptD7fZYbam8CrgnFJ6CM",
+            "m/44'/0'/0'/0/4 1Dxp9jGJqpZMybuj6RoD4qozUEbYMeJgET 0398e6783af803f5125c0d0eecaffd663d5873c961b65493fa31d29ade7eee2aea L3wFzjZDvf1znTFkfcDk7YRHDpG186o4Wfy6zzRSyerGGjdYqXG3",
+            "m/44'/0'/0'/0/5 17FymopXFtsz3FidDTXVYymEksfRVA8Prr 031900f3d2c249dd54c3c59c506bbdda65e61f614841c0254d309d5f206160b459 KxagjpYP8VGb4M2U1Q4tnZ8vuvt3BnwnzsiGen67kwZprMUeYCBx",
+            "m/44'/0'/0'/0/6 1ABU3xfqxYPMx37tK3ytNFMfF4EJhNCe4F 03c016cdac08271650e39748544ccb16bbcf89a470ca03aaed9cb61cb4eec79122 Kxong4YotFdirnM4eYKSq5Kyq55eKnqUqnyvEsskvb63Lwyk7oay",
+            "m/44'/0'/0'/0/7 178cLTCrTBRs1KD6rvkrGrtGBFibzwcWHS 03857c2f52bf8363566ecdf0c2f1aac249a8a09ad9b442f46782e397cd7ddf3b4f L1WyWVRf3sHMeJs6FRbE2fxq2Ld2PPUwQcqDHMKs7NY76naFjQtP",
+            "m/44'/0'/0'/0/8 1raCHQ7gUGKS8LCxSp18Dw6pWq28Mubc2 0209683884b033ea08fb9ce44c8fc77fdad2c7935ffab765b76976f2404d84a58d L2A1nHGoLGCMBS9BJioAEuHGQH4NYLqxEnSaBKYWrXmhL4xg8h5G",
+            "m/44'/0'/0'/0/9 16rs2as6bHkKxJCKkeFKB4dMra2QMGJifc 03055297a3a7cbbd6ff32958f5d82f0cd4f1a29330fbd83d67038e406c27eb7412 L4nDdMuCKnxM9oqGtse989sS6fwyX2UxgafgZBnc71Z6mhiMudBx",
+            "m/44'/0'/0'/0/10 13TZhvvzcK5WYqT88tpmc7zcirKRMB65Fc 03b2d37804e7c04b12035c9d87cb8f8ba6fdf11744b2b37a52b023073eeee2fe4b L3NHZhyLjvum8nbKeGSYMzyjQritbsbtm8iPMAtH8sVRkqNw8VfR",
+            "m/44'/0'/0'/0/11 1LEkeCdpvD3FRRbCajLqdEDwTnKjxEte4Z 02f88c7d8fc5b83f2f24c3868d3c5aba8ec4b8bef75338e09efe7f19f2653c10fb KxWhP2iqkbkS34MffJU94w1hsy6ixoyhh1xKWeRm1ZqX92khrv88",
+            "m/44'/0'/0'/0/12 1KAcnth9Ebr5bALRmFtWCRnd1vivgyGAnt 022f2f6a8a57c355b057d38c4e263760a50e085ba6b3afa25aa8c13fcb861c882f Kx1JcdaLVPt4EFseRYf6bhP8EwpNWjEkgLMLaNQT6HrU4hnCGe7g",
+            "m/44'/0'/0'/0/13 1AUMAcfiiXVqrthwtAPEJNEMoLQXYkLpx3 02695fd7ac3c09a3b568ec374965331d3146740ec938d1d3166cdf420e23688914 KxdtUhqVGD6HKUsCtaFm1vNXLzDQxWDzpTqhBk9y5RY1ACGj7BtW",
+            "m/44'/0'/0'/0/14 1E8Ywe96WNrGDb3V1zA8LLBbDqir1TBREo 02b2589ecb684684a332ad6753710af251e5455d387b60facbc78ea60998d4704a KxEZKXvR4pW3eVmuog714cHgJwxqm87uUcjrUU8e28uPzhq88qxX",
+            "m/44'/0'/0'/0/15 16oBYcHjoQ721NWPwuojmLuQbTmbFbsnyX 030f4b6d7f4ab090a9a4f912f6dc65d2b221b724fdb29fc06974aa011c3c072c20 Ky2Kpb9ephAmjyP2RsUtLfydwWZmhEWBkszfPfQJJPQFdmu8LyVD",
+            "m/44'/0'/0'/0/16 18dfhagZDyQcpFHN9XXG8WLJemhiYpkPSi 033b25fefbb04de60b7bffe61d0bcedb48916c08fa96f76a80c4e9288b61cb6044 KyAitBv7M7jVqtZXrJxypnZipfg9BdZhEVmUPDWvWRSN4KsB2gcH",
+            "m/44'/0'/0'/0/17 1ACpQPMNLewMbXWvVg78kZZKMf64bu8qtc 026691563d2ee9b7a5ae095b443a1199ff53d612928412d8965e163b78c31b89d6 L5dBkDYHfrTVy2ZKT9Xy8V5m34QTg3J2dbhhXMe8wMmAawLFpPGT",
+            "m/44'/0'/0'/0/18 14xgtqtqxvB8QFgaTihdTAgD9Wxm5tbonU 0306b36921313c59e4495bc1c4d9f6dc9c9303a8740767c7a1844c36c506b5f9e7 KwS6KDcNUA7WQ1FTZv9G3A6uWrPzEcYpiGQW5R8j5CkcjvmFduJh",
+            "m/44'/0'/0'/0/19 1BUauGHKJ69j7UsqcwX4p3NmELZuPbkY2d 03ded79d490a0c59ad79549acae0cbe9c8b102185c254f27a26993a5911f7cd038 L22FD2vSP6c2cxbD3ssyJZSKBvXxzjCGnGqAihdowkb3UADZn6q1"
+        ]
+    }
+}

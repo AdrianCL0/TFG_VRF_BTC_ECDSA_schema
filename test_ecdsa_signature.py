@@ -35,5 +35,3 @@ assert verify_signature(r,s,m,pk), "Signature could not be verified"
 
 print (f"Signature has been verified correctly")
 
-  
-
