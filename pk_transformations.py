@@ -2,8 +2,7 @@ from secp256k1_curve import EC
 
 
 from ecdsa.numbertheory import square_root_mod_prime
-from ecdsa.util import string_to_number, number_to_string
-from ecdsa.ellipticcurve import Point
+from ecdsa.util import number_to_string
 from ecdsa.curves import SECP256k1
 from ecdsa import ecdsa
 

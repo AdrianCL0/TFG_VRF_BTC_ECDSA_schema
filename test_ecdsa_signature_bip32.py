@@ -20,7 +20,7 @@ def check_curve_parameters():
 
 assert check_curve_parameters(), "Curve Discriminant not valid"
 
-for i in range(42):
+for i in range(10):
     #We get ALice's key pair
     [sk,pk]=get_bip32_key_pair()
     
@@ -32,5 +32,5 @@ for i in range(42):
     print (f"Message: {m}\n\nSignature S=(r,s):\n(r={r},\ns={s})\n")
     assert(verify_signature(r,s,m,pk)),"______________Signature could not be verified______________\n"
     #We verify the signature S=(r,s) of the message m with Alice's public key
-    print (f"_______________Signature has been verified correctly_______________\n")
+    print ("_______________Signature has been verified correctly_______________\n")
 

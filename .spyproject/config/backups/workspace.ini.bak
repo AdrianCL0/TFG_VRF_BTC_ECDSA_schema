@@ -4,7 +4,7 @@ save_data_on_exit = True
 save_history = True
 save_non_project_files = False
 project_type = 'empty-project-type'
-recent_files = ['bip32\\hdwallet\\derivations.py', 'prova.py', 'main.py', 'ecdsa_methods.py', 'wiftokey.py', 'secp256k1_curve.py', 'test_ecdsa_signature_bip32.py']
+recent_files = ['base58_wif.py', 'test_base58_wif.py', 'ecdsa_methods.py', 'test_ecdsa_signature_bip32.py', 'main.py']
 
 [main]
 version = 0.2.0

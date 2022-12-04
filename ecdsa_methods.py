@@ -1,7 +1,7 @@
 import random
 import hashlib
 
-from pk_transformations import compress,uncompress
+from pk_transformations import uncompress
 from base58_wif import b58decode
 from hdwallet import HDWallet
 from hdwallet.utils import generate_entropy
@@ -20,6 +20,7 @@ ENTROPY: str = generate_entropy(strength=STRENGTH)
 # Secret passphrase for mnemonic
 PASSPHRASE: Optional[str] = None  # "meherett"
 position = 0
+branch=0
 
 
 
@@ -43,11 +44,12 @@ def get_bip32_key_pair():
 
     hdwallet.from_index(44, hardened=True)
     hdwallet.from_index(0, hardened=True)
-    hdwallet.from_index(0, hardened=True)
+    hdwallet.from_index(branch, hardened=True)
     hdwallet.from_index(0)
     hdwallet.from_index(position)
     
-    print(f"Keys from path 44/0/0/0/{position}")
+    #print(f"Keys from path 44/0/0/0/{position}")
+    print("Keys from path", hdwallet.path())
     print("Public Key:", hdwallet.public_key())
     print("Private Key WIF format:", hdwallet.wif(),"\n")
     
