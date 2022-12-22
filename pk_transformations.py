@@ -6,8 +6,10 @@ from ecdsa.util import number_to_string
 from ecdsa.curves import SECP256k1
 from ecdsa import ecdsa
 
+
+#Compresses a PK formed by (x,y) into unique PK value
 def compress(x: int, y: int) -> bytes:
-    e_x = number_to_string(x,SECP256k1.order) #encoded x
+    e_x = number_to_string(x,EC.n) #encoded x
     return (b'\x03' + e_x) if y % 2 else (b'\x02' + e_x)
 
 

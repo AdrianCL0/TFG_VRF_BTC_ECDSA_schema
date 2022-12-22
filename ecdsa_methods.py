@@ -7,6 +7,7 @@ from hdwallet import HDWallet
 from hdwallet.utils import generate_entropy
 from hdwallet.symbols import BTC as SYMBOL
 from typing import Optional
+from rfc6979_files.rfc6979 import generate_k
 
 from secp256k1_curve import EC
 
@@ -19,8 +20,9 @@ LANGUAGE: str = "english"  # Default is english
 ENTROPY: str = generate_entropy(strength=STRENGTH)
 # Secret passphrase for mnemonic
 PASSPHRASE: Optional[str] = None  # "meherett"
-position = 0
-branch=0
+STEP = 0
+BRANCH_ECDSA=0
+BRANCH_VRF=0
 
 
 
@@ -34,7 +36,7 @@ def get_key_pair():
 
 def get_bip32_key_pair():
     
-    global position
+    global STEP
     
     hdwallet: HDWallet = HDWallet(symbol=SYMBOL, use_default_path=False)
     # Get Bitcoin HDWallet from entropy
@@ -43,17 +45,17 @@ def get_bip32_key_pair():
     )
 
     hdwallet.from_index(44, hardened=True)
+    hdwallet.from_index(BRANCH_ECDSA, hardened=True)
     hdwallet.from_index(0, hardened=True)
-    hdwallet.from_index(branch, hardened=True)
     hdwallet.from_index(0)
-    hdwallet.from_index(position)
+    hdwallet.from_index(STEP)
     
     #print(f"Keys from path 44/0/0/0/{position}")
     print("Keys from path", hdwallet.path())
     print("Public Key:", hdwallet.public_key())
     print("Private Key WIF format:", hdwallet.wif(),"\n")
     
-    position=position+1
+    STEP=STEP+1
     
 
     sk_wif=hdwallet.wif()
@@ -61,13 +63,8 @@ def get_bip32_key_pair():
     
     pk=uncompress(pk_compressed)
     
-    b = b58decode(sk_wif)
-    PK0 = b.hex()
-    PK0=PK0[2:]
-    sk= int(PK0[:64],16)
+    sk = b58decode(sk_wif)
 
-
-    
     return [sk,pk]
 
 def get_signature(m,sk):
@@ -91,6 +88,33 @@ def get_signature(m,sk):
 	s = (k_e_inv*(h+r*sk)) % EC.n
 
 	return r,s
+
+def get_rfc6979_signature(m,sk,alpha):
+
+	#We calculate the message hash and we transformed to an int
+    h=int(hashlib.sha256(m.encode()).hexdigest(),16)
+    
+    #We generathe the hash of alpha and transform it into bytes
+    data=hashlib.sha256(str(alpha).encode()).digest()
+	
+	#We generate a deterministic random number with RFC6979 standard
+    k_e = generate_k(EC.n, sk, hashlib.sha256, data)
+    
+    print (f"Deterministic RFC6979 nonce:\n{k_e}\n")
+	
+	#We calculate the value of the point R
+    r_point = scalar_multiply(k_e,EC.g)
+
+	#We define the value r as the x-coordinate of the R point
+    r = r_point[0] % EC.n
+	
+	#We calculate the inverse mod n of k_e
+    k_e_inv = pow(k_e,-1,EC.n)
+
+	#We calculate the value s as s=ke^-1*(h+r*d)
+    s = (k_e_inv*(h+r*sk)) % EC.n
+
+    return r,s
 	
 def verify_signature(r,s,m,pk):
 
@@ -195,3 +219,22 @@ def scalar_multiply(k, p):
     	assert is_on_curve(q)
 
     	return q
+    
+def point_neg(p):
+    #Returns -P
+    
+    #We check if the point belongs to the curve
+    assert is_on_curve(p)
+
+    if p is None:
+        # -Ꝍ= Ꝍ
+        return None
+
+    x, y = p
+    
+    result = (x, -y % EC.p)
+    
+    #We check if the point belongs to the curve
+    assert is_on_curve(result)
+
+    return result

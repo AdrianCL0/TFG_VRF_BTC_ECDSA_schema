@@ -4,7 +4,7 @@ save_data_on_exit = True
 save_history = True
 save_non_project_files = False
 project_type = 'empty-project-type'
-recent_files = ['base58_wif.py', 'test_base58_wif.py', 'ecdsa_methods.py', 'test_ecdsa_signature_bip32.py', 'main.py']
+recent_files = ['test_rfc6979.py', 'ecdsa_methods.py', 'test_ecdsa_signature_bip32.py', 'bip32\\tests\\test_base58.py']
 
 [main]
 version = 0.2.0

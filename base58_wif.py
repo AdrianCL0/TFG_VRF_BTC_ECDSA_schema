@@ -10,6 +10,7 @@ def _b58decode_int(val, base, charset):
         return output
 
 
+#Decodes a WIF base58 into a int value
 def b58decode(val, charset=DEFAULT_CHARSET):
     if isinstance(val, str):
         val = val.encode()
@@ -34,7 +35,11 @@ def b58decode(val, charset=DEFAULT_CHARSET):
         result.appendleft(mod)
 
     prefix = b'\0' * pad_len
-    return prefix + bytes(result)
+    aux= prefix + bytes(result)
+    PK0 = aux.hex()
+    PK0=PK0[2:]
+    sk= int(PK0[:64],16)
+    return sk
 
 def base58(address_hex):
     alphabet = '123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz'

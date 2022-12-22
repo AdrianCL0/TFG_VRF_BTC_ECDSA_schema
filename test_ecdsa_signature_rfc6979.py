@@ -1,7 +1,8 @@
 import sys
+import random
 import configparser as config
 
-from ecdsa_methods import get_signature,verify_signature,get_bip32_key_pair
+from ecdsa_methods import get_rfc6979_signature,verify_signature,get_bip32_key_pair
 from secp256k1_curve import EC
 
 #We get the parameters of the transaction to sign and define the m as the tx id
@@ -27,8 +28,10 @@ for i in range(100):
     
     print (f"Alice's public key={pk}\n")
     
+    alpha=random.randint(0, EC.n-1)
+    
     #We sign the message m with Alice's private key
-    r,s=get_signature(m,sk)
+    r,s=get_rfc6979_signature(m,sk,alpha)
     
     print (f"Message: {m}\n\nSignature S=(r,s):\n(r={r},\ns={s})\n")
     assert(verify_signature(r,s,m,pk)),"______________Signature could not be verified______________\n"
