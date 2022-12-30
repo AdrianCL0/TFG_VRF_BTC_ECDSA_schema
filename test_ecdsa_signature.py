@@ -23,15 +23,16 @@ assert check_curve_parameters(), "Curve Discriminant not valid"
 #We get ALice's key pair
 [sk,pk]=get_key_pair()
 
-print (f"Alice's public key={pk}\n")
+print (f"Alice's public key: {pk}\n")
 
 #We sign the message m with Alice's private key
 r,s=get_signature(m,sk)
 
-print (f"Message: {m}\n\nSignature S=(s,r):\n(r={r},\ns={s})\n")
+print (f"Message: {m}\n\nSignature S=(r,s):\n[r={r},\ns={s}]\n")
 
 #We verify the signature S=(r,s) of the message m with Alice's public key
-assert verify_signature(r,s,m,pk), "Signature could not be verified"
+assert(verify_signature(r,s,m,pk)),"______________Signature could not be verified______________\n"
+print ("_______________Signature has been verified correctly_______________\n")
 
-print (f"Signature has been verified correctly")
+
 
