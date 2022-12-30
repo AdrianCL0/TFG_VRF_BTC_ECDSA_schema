@@ -13,7 +13,7 @@ def compress(x: int, y: int) -> bytes:
     return (b'\x03' + e_x) if y % 2 else (b'\x02' + e_x)
 
 
-
+#Returns a point of the curve from a compressed BTC PK
 def uncompress(xs, curve=SECP256k1):
     is_even=False
     if xs[:2] == "02":
