@@ -1,6 +1,4 @@
 from secp256k1_curve import EC
-
-
 from ecdsa.numbertheory import square_root_mod_prime
 from ecdsa.util import number_to_string
 from ecdsa.curves import SECP256k1

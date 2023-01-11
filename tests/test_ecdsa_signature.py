@@ -34,5 +34,5 @@ print (f"Message: {m}\n\nSignature S=(r,s):\n[r={r},\ns={s}]\n")
 assert(verify_signature(r,s,m,pk)),"______________Signature could not be verified______________\n"
 print ("_______________Signature has been verified correctly_______________\n")
 
-
+print ("_______________TEST ECDSA SIGNATURE PASSED_______________\n")
 

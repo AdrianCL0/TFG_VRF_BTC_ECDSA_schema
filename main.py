@@ -54,5 +54,6 @@ def main():
         print ("_______________Signature has been verified correctly_______________\n")
   
     print (f"__________ALL {number_of_tx} TRANSACTIONS HAVE BEEN SIGNED AND VERIFIED__________\n")
+    
 if __name__ == "__main__":
     main()

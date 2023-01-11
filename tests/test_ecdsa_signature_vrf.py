@@ -49,3 +49,4 @@ for i in range(10):
     assert(verify_vrf_signature(Ro, R, s, m, alpha, pi, PK, B)),"______________Signature could not be verified______________\n"
     print ("_______________Signature has been verified correctly_______________\n")
 
+print ("_______________TEST ECDSA SIGNATURE WITH VRF PASSED_______________\n")

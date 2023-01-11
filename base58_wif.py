@@ -1,6 +1,8 @@
+import base58
+
 from collections import deque
 DEFAULT_CHARSET = b'123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz'
-import base58
+
 
 
 def _b58decode_int(val, base, charset):
