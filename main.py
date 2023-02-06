@@ -47,7 +47,7 @@ def main():
         Ro,R,s,pi=get_vrf_signature(m,alpha,d,x,PK)
         
         print (f"Message: {m}\n\nSignature: S=(R,Ro,s):\n[R={R},\nRo={Ro},\ns={s}]\n")
-        print (f"VRF: π = (γ,c,s’):\n[γ={pi[0]},\nc={pi[1]},\ns={pi[2]}]\n")
+        print (f"VRF: π = (γ,c,s’):\n[γ={pi[0]},\nc={pi[1]},\ns'={pi[2]}]\n")
         
         #We verify the signature S=(R,Ro,s) and the proof VRF π = (γ,c,s’) of the message m with Alice's public key
         assert(verify_vrf_signature(Ro, R, s, m, alpha, pi, PK, B)),"______________Signature could not be verified______________\n"
