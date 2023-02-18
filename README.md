@@ -5,4 +5,4 @@ in order to solve the problem of Anti-Exfil. The purpose of this implementation 
 ## VRF Protocol
 Our implementation consists of an ECDSA Signature together with a VRF for the generation of random numbers and their corresponding proofs. In addition, for key generation we will use BIP32, since from an entropy we can generate a master key that will allow us to derive public and private keys in different paths. One path will be for the signatures and another for the VRF. Finally, those values that should be randomly generated within the VRF will be generated using the RFC6979 standard.
 
-![image](https://user-images.githubusercontent.com/100357161/217018552-70f97f57-d16b-44bb-a473-a9539c97c13e.png)
+![image](https://user-images.githubusercontent.com/100357161/219899623-d8016cb1-67db-4d57-ad6b-1bb5bd2be52e.png)
